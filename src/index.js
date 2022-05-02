@@ -25,14 +25,38 @@ function formatDate(date) {
 
   return `${currentDay} ${todaysDate}, ${year} ${hour}:${minute}`;
 }
-
-function displayForecast() {
-  let forecastElement = document.querySelector(#forecast)
-  forecastElement.innerHTML="Forecast"
-}
-
 let date = document.querySelector("#date");
 date.innerHTML = formatDate(currentTime);
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row"`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastElement.innerHTML = forecastHTML;
+    forecastHTML =
+      forecastHTML +
+      `<div class="row">
+        <div class="col-2">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">${day}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">90°F</h6>
+              <p>
+                  <ul class="card-text">
+               <li>18</li>
+               <li>20</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+        `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 //conversion
 function convertToFahrenheit(event) {
@@ -53,12 +77,11 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-conversion");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-displayForecast();
-
 //search engine
 function capitalize(city) {
   return city && city[0].toUpperCase() + city.slice(1);
 }
+displayForecast();
 
 function replaceText(event) {
   event.preventDefault();
