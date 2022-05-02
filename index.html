@@ -14,71 +14,76 @@
     <link href="src/index.js" rel="javascript" type="text/javascript" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
-    <script src="https://kit.fontawesome.com/5ef3e27308.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/5ef3e27308.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
       <span class="header">
-    <div class="date">
-        <p id="date">---</p>
-    </div>
-    <div class="search">
-        <h2></h2>
-      <form id="search-city">
-<input type="text" placeholder="Search for a City" autocomplete="off"  autofocus="on" id="search-input"/>
-<button type="button" value="Search" id="search-button"> Search </button>
-<button type="button" value="Search" id="location-button"> Current Location </button>
-      </form>
-</div>
-</span>
+        <div class="date">
+          <p id="date">---</p>
+        </div>
+        <div class="search">
+          <h2></h2>
+          <form id="search-city">
+            <input
+              type="text"
+              placeholder="Search for a City"
+              autocomplete="off"
+              autofocus="on"
+              id="search-input"
+            />
+            <button type="button" value="Search" id="search-button">
+              Search
+            </button>
+            <button type="button" value="Search" id="location-button">
+              Current Location
+            </button>
+          </form>
+        </div>
+      </span>
 
-    <div class="area">
-           <div class="city">
-      <h1 id="city-search">City</h1>
-      </div>
-             <!-- <div class="location">
+      <div class="area">
+        <div class="city">
+          <h1 id="city-search">City</h1>
+        </div>
+        <!-- <div class="location">
               <p>Stone Oak, San Antonio, TX</p>
               </div> -->
-              </div>
+      </div>
 
-              <div class="temperature">
-                <h4><span id="current-temperature">0</span><span div class="conversion"><a href="#" id="fahrenheit-conversion">°F</a>|<a href="#" id="celsius-conversion">°C</a></span></h4>
-              </div>
-  
+      <div class="temperature">
+        <h4>
+          <span id="current-temperature">0</span
+          ><span div class="conversion"
+            ><a href="#" id="fahrenheit-conversion">°F</a>|<a
+              href="#"
+              id="celsius-conversion"
+              >°C</a
+            ></span
+          >
+        </h4>
+      </div>
+
       <div class="icon">
-      <i class="fa-solid fa-sun"></i>
+        <img src="" alt="" id="icon" class="float-left" />
       </div>
 
       <div class="information">
-      Humidity: <span id="humidity">0</span>
+        Humidity: <span id="humidity">0</span>
         <br />
-       Wind: <span id="wind">0</span>
-       <br />
+        Wind: <span id="wind">0</span>
+        <br />
       </div>
-   
 
       <hr />
-<div class="weather-forecast" id="forecast">
-      <div class="row">
-        <div class="col-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Monday</h5>
-              <h6 class="card-subtitle mb-2 text-muted">90°F</h6>
-              <p>
-                  <ul class="card-text">
-               <li>Precipitation: 0%</li>
-               <li>Humidity: 29%</li>
-               <li>Wind: 3 mph</li>
-                </ul>
-              </p>
-            </div>
-          </div>
-        </div>
-        </div>
+      <div class="weather-forecast" id="forecast"></div>
     </div>
-    </div>
-    <a href = "https://github.com/rrcrystal/weather-app" class="repository">GITHUB Repository</a>
+    <a href="https://github.com/rrcrystal/weather-app" class="repository"
+      >GITHUB Repository</a
+    >
     <script src="src/index.js"></script>
   </body>
 </html>
