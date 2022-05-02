@@ -79,25 +79,6 @@ function getForecast(coordinates) {
   axios.get(apiURL).then(displayForecast);
 }
 
-//conversion
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 0;
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 0;
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-conversion");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-conversion");
-celsiusLink.addEventListener("click", convertToCelsius);
-
 //search engine
 function capitalize(city) {
   return city && city[0].toUpperCase() + city.slice(1);
