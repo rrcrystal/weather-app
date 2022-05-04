@@ -19,7 +19,7 @@ h2 {
   color: #ffffff;
   background-color: darkseagreen;
   margin: 0 auto;
-  padding: 20px 2px 2px 15px;
+  padding: 20px 2px 2px 20px;
   display: block;
 }
 .search {
@@ -27,7 +27,7 @@ h2 {
   color: #ffffff;
   background-color: darkseagreen;
   margin: 0 auto;
-  padding: 0 2px 20px 15px;
+  padding: 10px 2px 20px 15px;
   display: block;
 }
 .area,
@@ -56,6 +56,8 @@ h2 {
 }
 .information {
   margin: 5px;
+  padding-bottom: 20px;
+  text-align: center;
 }
 .forecast {
   margin: 0 auto;
@@ -71,20 +73,8 @@ hr {
 }
 ul.card-text {
   font-size: 12px;
-  list-style-type: none;
   padding: 0;
 }
-
-.conversion {
-  font-size: 15px;
-  vertical-align: top;
-}
-
-#celsius-conversion,
-#fahrenheit-conversion {
-  text-decoration: none;
-}
-
 .repository {
   margin-top: 15px;
   text-align: center;
@@ -95,6 +85,7 @@ ul.card-text {
 
 .weather-forecast {
   margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
   color: #000;
 }

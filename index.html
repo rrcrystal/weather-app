@@ -28,20 +28,35 @@
         <div class="search">
           <h2></h2>
           <form id="search-city">
-            <input
-              type="text"
-              placeholder="Search for a City"
-              autocomplete="off"
-              autofocus="on"
-              id="search-input"
-            />
-            <button type="button" value="Search" id="search-button">
-              Search
-            </button>
-            <button type="button" value="Search" id="location-button">
-              Current Location
-            </button>
+            <div class="row">
+              <div class="col-4">
+                <input
+                  type="search"
+                  placeholder="Search for a City"
+                  class="form-control"
+                  autocomplete="off"
+                  autofocus="on"
+                  id="search-input"
+                />
+              </div>
+              <div class="col-1">
+                <input
+                  type="submit"
+                  value="Search"
+                  id="search-button"
+                  class="search-button"
+                />
+              </div>
+<div class="col-1">
+ <input
+                type="button"
+                 value="Current Weather"
+                 id="current-weather"
+                class="search-button"
+              />
+            </div>
           </form>
+          </div>
         </div>
       </span>
 

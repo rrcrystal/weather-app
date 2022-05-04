@@ -1,6 +1,20 @@
 //time and date
-let currentTime = new Date();
-function formatDate(date) {
+function formatDate(todaysDate) {
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
   let days = [
     "Sunday",
     "Monday",
@@ -10,23 +24,21 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
+  let formatDay = days[todaysDate.getDay()];
+  let formatMonth = months[todaysDate.getMonth()];
+  let formatYear = todaysDate.getFullYear();
+  let formatDate = todaysDate.getDate();
+  let formatHour = todaysDate.getHours();
+  let formatMinutes = todaysDate.getMinutes();
 
-  let currentDay = days[date.getDay()];
-  let todaysDate = date.getDate();
-  let year = date.getFullYear();
-  let hour = date.getHours();
-  if (hour < 10) {
-    hour = `0${hour}`;
+  if (formatMinutes < 10) {
+    formatMinutes = `0${formatMinutes}`;
   }
-  let minute = date.getMinutes();
-  if (minute < 10) {
-    minute = `0${minute}`;
-  }
-
-  return `${currentDay} ${todaysDate}, ${year} ${hour}:${minute}`;
+  return `${formatDay}, ${formatMonth} ${formatDate} ${formatYear} </br>${formatHour}:${formatMinutes}`;
 }
-let date = document.querySelector("#date");
-date.innerHTML = formatDate(currentTime);
+
+let heading = document.querySelector("#date");
+heading.innerHTML = formatDate(new Date());
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -135,7 +147,7 @@ function getPosition(event) {
   navigator.geolocation.getCurrentPosition(geoPosition);
 }
 
-let currentLocation = document.querySelector("#location-button");
+let currentLocation = document.querySelector("#current-weather");
 currentLocation.addEventListener("click", getPosition);
 
 function citySearch(response) {
@@ -147,7 +159,8 @@ function citySearch(response) {
 }
 
 let cityInput = document.querySelector("#search-input");
-cityInput.addEventListener("keyup", function (event) {
+cityInput.addEventListener("keypress", function (event) {
+  preventDefault();
   if (event.keyCode === 13) {
     document.querySelector("#search-button").click();
   }
